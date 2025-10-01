@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,600;0,800;1,600&display=swap');
+:root {
+  --text-dark: #403f3d;
+  --text-light: #e1d4c9;
+  --text-accent: #b0907a;
+
+  --bg-body: #e1d4c9;
+  --bg-container: #665f55;
+  --bg-backdrop: #403f3d;
+
+  --border-light: #c1b6ad;
+  --border-dark: #665f55;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-body);
+  max-width: 1440px;
+  margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+        padding-right: 40px;
+    padding-left: 40px;
+     max-width: 1360px;
+     
+}
+.header-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+
+.header-nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;  
+  line-height: 28px;  
+  letter-spacing: 0;
+  text-decoration: none;
+  color: var(--text-dark);
+  display: inline-block;
+
+}
+
+.header-nav a,
+.ghost-link {
+  text-decoration: underline;
+  text-decoration-thickness: 2px; 
+  text-underline-offset: 6px;     
+  text-decoration-color: transparent;
+  transition: text-decoration-color .18s ease, 
+              text-decoration-thickness .18s ease;
+}
+
+
+@media (hover:hover) and (pointer:fine){
+  .header-nav a:hover,
+  .header-nav a:focus-visible,
+  .ghost-link:hover,
+  .ghost-link:focus-visible {
+    text-decoration-color: currentColor; 
+    text-decoration-thickness: 2px;      
+  }
+}
+
+
+.ghost-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 9px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;   
+  line-height: 28px;
+  color: var(--text-dark);
+
+ 
+
+}
+
+.ghost-link img {
+  width: 20.8px;
+  height: 20.8px;
+  align-self: flex-start;
+ 
+}
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto 32px;
+   padding-top: 2px;
+   
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+ 
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  padding: 100px;
+  color: #fff;
+  max-width: 760px;
+
+}
+
+.hero-eyebrow {
+  margin: 0 0 40px 0;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;   
+  font-weight: 600;      
+  font-size: 72px;
+  line-height: 1.06;      
+  letter-spacing: -0.002em;      
+  color: var(--text-accent);
+  text-shadow: none;
+}
+
+.eyebrow-i {
+  font-weight: 600;              
+  font-style: oblique 120deg;      
+}
+
+
+.hero-premium {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;     
+  font-weight: 600; 
+  text-shadow: none;
+  
+ line-height: 1.01; 
+  color: var(--text-light); 
+  font-size: 71px;   
+  
+  letter-spacing: 0.006em;
+}
+
+.hero-sub {
+  margin: 0 0 40px 0;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 640px;
+  font-weight: 300;
+  letter-spacing: 0.008em;
+  color: var(--text-light);
+  max-width: 530px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  border-radius: 999px;
+  background: #e8e1da;
+  color: #2d2b29;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,.1);
+  
+}
+
+.btn-primary{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 19px 78px;
+  border-radius: 999px;
+  background: var(--bg-body);
+  color: var(--text-dark);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  text-decoration: none;
+  max-height: 199px;
+}
+
+.btn-icon{
+  position: absolute;
+  right: 52px;           
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%) translateX(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+@media (hover:hover) and (pointer:fine){
+  .btn-primary:hover .btn-icon{
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
