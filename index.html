@@ -21,102 +21,142 @@
 
         <nav aria-label="Primary" class="header-nav">
           <ul>
-            <li><a href="#">Favorite coffee</a></li>
+            <li><a href="#favorite-coffee">Favorite coffee</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Mobile app</a></li>
             <li><a href="#">Contact us</a></li>
           </ul>
         </nav>
+        <a href="#menu" class="ghost-link" aria-label="Open menu">
+          Menu<img src="./assets/header/coffee-cup.svg" alt="cup" />
+        </a>
 
-        <div class="right">
-          <a href="#menu" class="ghost-link" aria-label="Open menu">
-            Menu<img src="./assets/header/coffee-cup.svg" alt="cup" />
-          </a>
-        </div>
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Toggle menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <img
+            id="burger-icon"
+            src="./assets/header/State=default.png"
+            alt="burger-icon"
+          />
+        </button>
       </div>
 
       <section class="hero" aria-label="Enjoy premium coffee">
-        <img
-          class="hero-img"
-          src="./assets/header/EnjoyCoffee.png"
-          alt="Latte art"
-        />
+      
+          <video autoplay muted loop playsinline class="hero-img">
+    <source src="assets/video/video.mp4" type="video/mp4" />
+  </video>
         <div class="hero-content">
-          <h1 class="hero-eyebrow">
-            <span class="eyebrow-i">Enjoy</span> <span class="hero-premium">premium<br>coffee at our<br>charming cafe</span>
-          </h1>
-         
-          <p class="hero-sub">
-            With its inviting atmosphere and delicious coffee options, the
-            Coffee House Resource is a popular destination for coffee lovers and
-            those seeking a warm and inviting space to enjoy their favorite
-            beverage.
-          </p>
-          <a href="./menu.html" class="btn-primary">
-  <span class="btn-label">Menu</span>
-  <img class="btn-icon" src="./assets/header/coffee-cup.svg" alt="" aria-hidden="true">
-</a>
-          
+          <div class="hero-content-eyebrow">
+            <h1 class="hero-eyebrow">
+              <span class="eyebrow-i">Enjoy</span>
+              <span class="hero-premium"
+                >premium<br />
+                coffee at our<br />
+                charming cafe</span
+              >
+            </h1>
+
+            <p class="hero-sub">
+              With its inviting atmosphere and delicious coffee options, the
+              Coffee House Resource is a popular destination for coffee lovers
+              and those seeking a warm and inviting space to enjoy their
+              favorite beverage.
+            </p>
+            <div class="hero-content-eyebrow-btn">
+              <a href="./menu.html" class="btn-primary">
+                <span class="btn-label">Menu</span>
+                <img
+                  class="btn-icon"
+                  src="./assets/header/coffee-cup.svg"
+                  alt="coffee-cup"
+                  aria-hidden="true"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
+
+      <div
+        class="mobile-menu"
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="mobile-menu-title"
+      >
+        <div class="mobile-sheet" id="mobile-sheet">
+          <div class="nav-section">
+            <nav class="mobile-nav">
+              <h2 id="mobile-menu-title" class="sr-only">Site navigation</h2>
+              <ul>
+                <li><a href="#favorite">Favorite coffee</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#app">Mobile app</a></li>
+                <li><a href="#contacts">Contact us</a></li>
+              </ul>
+            </nav>
+            <a href="menu.html" class="ghost-link-burger"
+              >Menu
+              <img
+                src="./assets/header/coffee-cup.svg"
+                class="menu-icon"
+                alt="coffee-cup"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
-    <section class="hero" aria-label="Hero">
-      <div
-        class="hero-media"
-        role="img"
-        aria-label="A close-up of latte art in a cup"
-      ></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
+    <section id="favorite-coffee" class="slider-section">
+      <h2 class="slider-heading">
+        Choose your <span class="highlight">favorite</span> coffee
+      </h2>
 
-      <div class="hero-inner">
-        <h1 class="eyebrow">
-          Enjoy
-          <span
-            style="
-              font-family: Inter, system-ui, sans-serif;
-              font-style: normal;
-              font-weight: 800;
-            "
-            >premium</span
-          >
-        </h1>
-        <p class="title">coffee at our charming cafe</p>
-        <p class="subtitle">
-          With its inviting atmosphere and delicious coffee options, the Coffee
-          House Resource is a popular destination for coffee lovers and those
-          seeking a warm and inviting space to enjoy their favorite beverage.
-        </p>
-        <a href="#" class="cta">Menu</a>
+      <div class="ch-slider" id="ch-slider" aria-roledescription="carousel">
+        <div class="ch-container">
+          <div class="ch-buttons">
+            <button class="ch-arrow ch-prev" aria-label="Previous">
+              <img src="assets/buttons/arrow-right.svg" alt="Prev" />
+            </button>
+            <button class="ch-arrow ch-next" aria-label="Next">
+              <img src="assets/buttons/arrow-right.svg" alt="Next" />
+            </button>
+          </div>
+
+          <div class="ch-viewport">
+            <div class="ch-track" id="ch-track"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ch-dots" id="ch-dots"></div>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2 class="about-heading">
+        Resource is
+        <span class="highlight">the perfect and cozy place</span> where you can
+        enjoy a variety of hot beverages, relax, catch up with friends, or get
+        some work done.
+      </h2>
+      <div class="photo-conteiner">
+        <div class="right">
+          <img src="./assets/about-section/box.png" alt="girl">
+          <img class="mobile-hide" src="./assets/about-section/box1.png" alt="girl">
+        </div>
+        <div class="left">
+          <img class="mobile-hide" src="./assets/about-section/box2.png" alt="girl">
+          <img src="./assets/about-section/box3.png" alt="girl">
+        </div>
       </div>
     </section>
-    <section class="hero" aria-label="Hero">
-      <div
-        class="hero-media"
-        role="img"
-        aria-label="A close-up of latte art in a cup"
-      ></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
 
-      <div class="hero-inner">
-        <h1 class="eyebrow">
-          Enjoy
-          <span
-            style="
-              font-family: Inter, system-ui, sans-serif;
-              font-style: normal;
-              font-weight: 800;
-            "
-            >premium</span
-          >
-        </h1>
-        <p class="title">coffee at our charming cafe</p>
-        <p class="subtitle">
-          With its inviting atmosphere and delicious coffee options, the Coffee
-          House Resource is a popular destination for coffee lovers and those
-          seeking a warm and inviting space to enjoy their favorite beverage.
-        </p>
-        <a href="#" class="cta">Menu</a>
-      </div>
-    </section>
+    <script src="script.js"></script>
   </body>
 </html>
