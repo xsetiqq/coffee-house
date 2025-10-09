@@ -10,14 +10,15 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
     <link rel="icon" type="image/png" href="./assets/header/logo.svg">
   </head>
   <body>
     <header class="header">
       <div class="topbar">
         <div class="brand">
-          <img src="./assets/header/logo.png" alt="CoffeeLogo">
+          <a href="./index.html"><img src="./assets/header/logo.png" alt="CoffeeLogo"></a>
+          
         </div>
 
         <nav aria-label="Primary" class="header-nav">
@@ -28,7 +29,7 @@
             <li><a href="#contacts">Contact us</a></li>
           </ul>
         </nav>
-        <a href="#menu" class="ghost-link" aria-label="Open menu">
+        <a href="./menu.html" class="ghost-link" aria-label="Open menu">
           Menu<img src="./assets/header/coffee-cup.svg" alt="cup">
         </a>
 
@@ -49,7 +50,7 @@
 
       <section class="hero" aria-label="Enjoy premium coffee">
         <video autoplay muted loop playsinline class="hero-img">
-          <source src="assets/video/video.mp4" type="video/mp4" >
+          <source src="./assets/video/video.mp4" type="video/mp4" >
         </video>
         <div class="hero-content">
           <div class="hero-content-eyebrow">
@@ -101,7 +102,7 @@
                 <li><a href="#contacts">Contact us</a></li>
               </ul>
             </nav>
-            <a href="menu.html" class="ghost-link-burger"
+            <a href="./menu.html" class="ghost-link-burger"
               >Menu
               <img
                 src="./assets/header/coffee-cup.svg"
@@ -124,10 +125,10 @@
         <div class="ch-container">
           <div class="ch-buttons">
             <button class="ch-arrow ch-prev" aria-label="Previous">
-              <img src="assets/buttons/arrow-right.svg" alt="Prev">
+              <img src="./assets/buttons/arrow-right.svg" alt="Prev">
             </button>
             <button class="ch-arrow ch-next" aria-label="Next">
-              <img src="assets/buttons/arrow-right.svg" alt="Next">
+              <img src="./assets/buttons/arrow-right.svg" alt="Next">
             </button>
           </div>
 
@@ -224,6 +225,7 @@
             <a
               href="https://www.google.com/maps?q=8558+Green+Rd,+LA"
               rel="noopener noreferrer"
+              target="_blank"
             >
               8558 Green Rd., LA
             </a>
@@ -232,7 +234,14 @@
             <span class="icon"
               ><img src="./assets/footer/Path.svg" alt="Path"
             ></span>
-            +1 (603) 555-0123
+            
+              <a
+              href="tel:+12127724150"
+             
+              target="_blank"
+            >
+              +1 (603) 555-0123
+            </a>
           </div>
 
           <div>
@@ -245,6 +254,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
