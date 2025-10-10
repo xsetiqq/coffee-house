@@ -683,15 +683,14 @@ body {
   .ch-container {
     height: auto;
   }
-
 }
 @media (max-width: 767px) {
   .contact-heading {
-  margin: 0;
-  font-weight: 600;
-  font-size: 31px !important;
-  line-height: 1.25;
-}
+    margin: 0;
+    font-weight: 600;
+    font-size: 31px !important;
+    line-height: 1.25;
+  }
 }
 
 .photo-conteiner {
@@ -818,7 +817,6 @@ body {
   .contact-box {
     max-width: 330px;
   }
- 
 }
 
 @media (max-width: 768px) {
