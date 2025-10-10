@@ -472,7 +472,7 @@ body {
   bottom: -2px;
   width: 0;
   height: 1px;
-   background: var(--text-light);
+  background: var(--text-light);
   transition: width 0.25s ease;
 }
 .contact-box a:hover::after {
