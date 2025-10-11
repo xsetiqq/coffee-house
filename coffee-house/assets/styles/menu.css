@@ -76,6 +76,7 @@ body {
 }
 .text-decoration {
   border-bottom: 2px solid var(--text-dark);
+  cursor: not-allowed;
 }
 
 .ghost-link {
@@ -907,4 +908,17 @@ body {
   height: 30px;
   object-fit: contain;
   pointer-events: none;
+}
+.ghost-link.inactive {
+  pointer-events: none;
+  opacity: 1;
+  cursor: not-allowed;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.ghost-link.inactive:hover {
+  opacity: 1;
+  text-decoration: none;
+  cursor: not-allowed;
 }
