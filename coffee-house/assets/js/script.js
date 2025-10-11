@@ -21,8 +21,8 @@ const items = [
 
 const track = document.getElementById("ch-track");
 const dotsRoot = document.getElementById("ch-dots");
-const prevBtn = document.querySelector(".ch-prev");
-const nextBtn = document.querySelector(".ch-next");
+const nextBtn = document.querySelector(".ch-prev");
+const prevBtn = document.querySelector(".ch-next");
 const slider = document.getElementById("ch-slider");
 
 items.forEach((it) => {
