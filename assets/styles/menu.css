@@ -922,3 +922,22 @@ body {
   text-decoration: none;
   cursor: not-allowed;
 }
+
+* {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent; 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.seg-item:has(input:checked) .seg-content {
+    background: var(--bg-container);
+  color: var(--text-light);
+}
+
+@media (max-width: 420px) {
+  .menu-tabs{
+    gap: 8px;
+  }
+}

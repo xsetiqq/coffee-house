@@ -1041,3 +1041,11 @@ body {
 .contact-box a:hover::after {
   width: 100%;
 }
+* {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent; 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
