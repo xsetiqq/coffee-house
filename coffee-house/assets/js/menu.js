@@ -212,12 +212,12 @@ productList.addEventListener("click", (e) => {
 });
 
 modal.addEventListener("change", (e) => {
-  if (e.target.matches('input[name="size"]')) {
-    modal
-      .querySelectorAll(".seg .seg-item")
-      .forEach((l) => l.classList.remove("is-active"));
-    e.target.closest(".seg-item").classList.add("is-active");
-  }
+ if (e.target.matches('input[name="size"]')) {
+   sizesGroup
+     .querySelectorAll(".seg-item")
+     .forEach((l) => l.classList.remove("is-active"));
+   e.target.closest(".seg-item").classList.add("is-active");
+ }
 
   if (e.target.type === "checkbox" && e.target.closest(".seg--chips")) {
     const label = e.target.closest(".seg-item");
@@ -280,22 +280,23 @@ if (sizesGroup && product.sizes) {
 
 if (addsGroup) {
   const adds = product.additives || [];
-  addsGroup.innerHTML = adds
-    .map(
-      (a, i) => `
-    <label class="seg-item">
-      <input type="checkbox" data-price="${Number(
-        a["add-price"] || 0
-      )}" value="${a.name}">
-      <span class="seg-content">
-        <img src="./assets/menu/modal-icons/sizes/${i + 1}.png"
-             alt="${i + 1}" width="30" height="30">
-        <span>${a.name}</span>
-      </span>
-    </label>
-  `
-    )
-    .join("");
+ addsGroup.innerHTML = adds
+   .map(
+     (a, i) => `
+  <label class="seg-item">
+    <input type="checkbox" data-price="${Number(a["add-price"] || 0)}" value="${
+       a.name
+     }">
+    <span class="seg-content">
+      <img src="./assets/menu/modal-icons/sizes/${i + 1}.png" alt="${
+       i + 1
+     }" width="30" height="30">
+      <span>${a.name}</span>
+    </span>
+  </label>
+`
+   )
+   .join("");
 }
 
 
@@ -318,20 +319,12 @@ function computeTotal(base) {
 }
 
 modal.addEventListener("change", (e) => {
-
   if (e.target.matches('input[name="size"]')) {
-    modal
-      .querySelectorAll(".seg .seg-item")
+    sizesGroup
+      .querySelectorAll(".seg-item")
       .forEach((l) => l.classList.remove("is-active"));
-    e.target.closest(".seg-item").classList.add("is-active");
+    e.target.closest(".seg-item")?.classList.add("is-active");
   }
-
-  if (e.target.type === "checkbox" && e.target.closest(".seg--chips")) {
-    e.target
-      .closest(".seg-item")
-      .classList.toggle("is-active", e.target.checked);
-  }
-
   if (currentProduct) {
     modalPrice.textContent = `$${computeTotal(currentProduct.price)}`;
   }
