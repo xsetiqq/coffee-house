@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coffee House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles/menu.css" />
+    <link rel="icon" type="image/png" href="./assets/header/logo.svg" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="topbar">
+        <div class="brand">
+          <a href="./index.html"
+            ><img src="./assets/header/logo.png" alt="CoffeeLogo"
+          /></a>
+        </div>
+
+        <nav aria-label="Primary" class="header-nav">
+          <ul>
+            <li><a href="./index.html#favorite-coffee">Favorite coffee</a></li>
+            <li><a href="./index.html#about">About</a></li>
+            <li><a href="./index.html#app">Mobile app</a></li>
+            <li><a href="./index.html#contacts">Contact us</a></li>
+          </ul>
+        </nav>
+        <div class="BuyCard cart-badge">
+          <a href="./card.html" id="cartBtn" class="cart-btn" aria-label="Cart" >
+            <img
+              src="./assets/header/shopping-bag.svg"
+              alt="Cart"
+              width="20"
+              height="20"
+              style="display: block;"
+            />
+            <span id="cartCount" class="cart-badge" hidden>0</span>
+           
+          </a>
+          <div class="">
+            <a
+              href="./menu.html"
+              class="ghost-link"
+              aria-label="Open menu"
+            >
+              Menu
+              <img src="./assets/header/coffee-cup.svg" alt="cup" />
+            </a>
+          </div>
+        </div>
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Toggle menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <img
+            id="burger-icon"
+            src="./assets/header/State=default.png"
+            alt="burger-icon"
+          />
+        </button>
+      </div>
+
+      <div
+        class="mobile-menu"
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="mobile-menu-title"
+      >
+        <div class="mobile-sheet" id="mobile-sheet">
+          <div class="nav-section">
+            <nav class="mobile-nav">
+              <h2 id="mobile-menu-title" class="sr-only">Site navigation</h2>
+              <ul>
+                <li>
+                  <a href="./index.html#favorite-coffee">Favorite coffee</a>
+                </li>
+                <li><a href="./index.html#about">About</a></li>
+                <li><a href="./index.html#app">Mobile app</a></li>
+                <li><a href="./index.html#contacts">Contact us</a></li>
+              </ul>
+            </nav>
+            <a href="./menu.html" class="ghost-link-burger"
+              >Menu
+              <img
+                src="./assets/header/coffee-cup.svg"
+                class="menu-icon"
+                alt="coffee-cup"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+     <section class="signIn-section">
+  <div class="auth-section">
+    <h2 class="cups-heading">Registration</h2>
+
+   <form id="registerForm" class="register-form " novalidate>
+  
+    
+     <div class="flex-row" > <label class="auth-label">
+      Login
+      <input id="regLogin" type="text" name="login" placeholder="Placeholder" class="auth-input" />
+      <small class="field-error" id="errLogin"></small>
+    </label>
+
+    
+    <label class="auth-label">
+      Password
+      <input id="regPassword" type="password" name="password" placeholder="Placeholder" class="auth-input" />
+      <small class="field-error" id="errPassword"></small>
+    </label>
+
+    
+    <label class="auth-label">
+      Confirm Password
+      <input id="regPassword2" type="password" name="password2" placeholder="Placeholder" class="auth-input" />
+      <small class="field-error" id="errPassword2"></small>
+    </label></div>
+   
+<div class="flex-row">
+    
+    <label class="auth-label">
+      City
+      <select id="regCity" name="city" class="auth-input">
+        <option value="" selected hidden>Choose city</option>
+        <option value="New York">New York</option>
+        <option value="Chicago">Chicago</option>
+        <option value="Boston">Boston</option>
+      </select>
+      <small class="field-error" id="errCity"></small>
+    </label>
+
+    
+    <label class="auth-label">
+      Street
+      <select id="regStreet" name="street" class="auth-input" disabled>
+        <option value="" selected hidden>Choose street</option>
+      </select>
+      <small class="field-error" id="errStreet"></small>
+    </label>
+
+    
+    <label class="auth-label">
+      House number
+      <input id="regHouse" type="number" name="houseNumber" placeholder="Placeholder" class="auth-input" />
+      <small class="field-error" id="errHouse"></small>
+    </label>
+</div>
+    
+    <fieldset class="auth-label" style="border:0;padding:0;margin:0">
+      <legend style="font-weight:600;color:var(--text-dark);margin-bottom:8px">Pay by</legend>
+      <div class="radio-row">
+        <label class="radio"><input type="radio" name="paymentMethod" value="cash" checked> Cash</label>
+        <label class="radio"><input type="radio" name="paymentMethod" value="card"> Card</label>
+      </div>
+      <small class="field-error" id="errPay"></small>
+    </fieldset>
+  
+
+  <button id="registerBtn" type="submit" class="btn auth-btn" disabled>Registration</button>
+  <div id="formErr" class="form-error" aria-live="polite"></div>
+</form>
+  </div>
+</section>
+
+    </main>
+    <footer id="contacts" class="contacts-section">
+      <div class="ofer">
+        <h2 class="contact-heading">
+          Sip, Savor, Smile.<br class="mobile-hide" />
+          <span class="highlight">It’s coffee time!</span>
+        </h2>
+        <div class="social-buttons">
+          <a href="#" class="social-btn twitter"></a>
+          <a href="#" class="social-btn instagram"></a>
+          <a href="#" class="social-btn facebook"></a>
+        </div>
+      </div>
+      <div class="contact-box">
+        <h3 class="">Contact us</h3>
+        <div class="info">
+          <div>
+            <span class="icon"
+              ><img src="./assets/footer/pin-alt.svg" alt="pin"
+            /></span>
+            <a
+              href="https://www.google.com/maps?q=8558+Green+Rd,+LA"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              8558 Green Rd., LA
+            </a>
+          </div>
+          <div>
+            <span class="icon"
+              ><img src="./assets/footer/Path.svg" alt="Path"
+            /></span>
+            <a href="tel:+12127724150" target="_blank"> +1 (603) 555-0123 </a>
+          </div>
+
+          <div>
+            <span class="icon"
+              ><img src="./assets/footer/clock.svg" alt="clock"
+            /></span>
+            Mon-Sat: 9:00 AM – 23:00 PM
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+     <script type="module" src="./src/ts/register.ts"></script>
+  </body>
+</html>
