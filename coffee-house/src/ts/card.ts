@@ -101,7 +101,7 @@ function renderCart(): void {
 
       li.innerHTML = `
         <button class="trash" aria-label="Remove" data-i="${idx}">
-          <img src="./src/assets/card/trash.svg" alt="Remove" width="24" height="24">
+          <img src="./assets/card/trash.svg" alt="Remove" width="24" height="24">
         </button>
 
         <img class="thumb" src="${it.img}" alt="" width="100" height="100" />
@@ -310,7 +310,7 @@ function openMenu() {
   mobileMenu.classList.add("is-open");
   burger?.setAttribute("aria-expanded", "true");
   if (burgerIcon instanceof HTMLImageElement) {
-    burgerIcon.src = "./src/assets/header/State=active.png";
+    burgerIcon.src = "./assets/header/State=active.png";
   }
   document.body.classList.add("no-scroll");
 }
@@ -321,7 +321,7 @@ function closeMenu() {
   mobileMenu.classList.remove("is-open");
   burger?.setAttribute("aria-expanded", "false");
   if (burgerIcon instanceof HTMLImageElement)
-    burgerIcon.src = "./src/assets/header/State=default.png";
+    burgerIcon.src = "./assets/header/State=default.png";
   document.body.classList.remove("no-scroll");
 }
 if (!mobileMenu) {

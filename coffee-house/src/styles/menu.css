@@ -406,22 +406,22 @@ body {
   transform: scale(1.1);
 }
 .twitter {
-  background-image: url("../assets/footer/X-State=default.png");
+  background-image: url("/assets/footer/X-State=default.png");
 }
 .twitter:hover {
-  background-image: url("../assets/footer/X-State=hover.png");
+  background-image: url("/assets/footer/X-State=hover.png");
 }
 .instagram {
-  background-image: url("../assets/footer/instagram-State=default.png");
+  background-image: url("/assets/footer/instagram-State=default.png");
 }
 .instagram:hover {
-  background-image: url("../assets/footer/instagram-State=hover.png");
+  background-image: url("/assets/footer/instagram-State=hover.png");
 }
 .facebook {
-  background-image: url("../assets/footer/Meta-State=default.png");
+  background-image: url("/assets/footer/Meta-State=default.png");
 }
 .facebook:hover {
-  background-image: url("../assets/footer/Meta-State=hover.png");
+  background-image: url("/assets/footer/Meta-State=hover.png");
 }
 
 .contact-box {
@@ -600,29 +600,29 @@ body {
 
 .tab.coffee {
   width: 115px;
-  background-image: url("../assets/menu-tab/coffee-tab-item.png");
+  background-image: url("/assets/menu-tab/coffee-tab-item.png");
 }
 .tab.coffee:hover,
 .tab.coffee.active {
-  background-image: url("../assets/menu-tab/coffee-tab-item-active-hover.png");
+  background-image: url("/assets/menu-tab/coffee-tab-item-active-hover.png");
 }
 
 .tab.tea {
   width: 90px;
-  background-image: url("../assets/menu-tab/tea-tab-item.png");
+  background-image: url("/assets/menu-tab/tea-tab-item.png");
 }
 .tab.tea:hover,
 .tab.tea.active {
-  background-image: url("../assets/menu-tab/tea-tab-item-active-hover.png");
+  background-image: url("/assets/menu-tab/tea-tab-item-active-hover.png");
 }
 
 .tab.dessert {
   width: 124px;
-  background-image: url("../assets/menu-tab/dessert-tab-item.png");
+  background-image: url("/assets/menu-tab/dessert-tab-item.png");
 }
 .tab.dessert:hover,
 .tab.dessert.active {
-  background-image: url("../assets/menu-tab/dessert-tab-item-active-hover.png");
+  background-image: url("/assets/menu-tab/dessert-tab-item-active-hover.png");
 }
 .product-list {
   display: grid;
@@ -689,7 +689,7 @@ body {
   width: 60px;
   height: 60px;
 
-  background: url("../assets/menu/button-icon-dark.png") center/60px no-repeat;
+  background: url("/assets/menu/button-icon-dark.png") center/60px no-repeat;
 
   cursor: pointer;
   margin-top: 60px;
@@ -699,7 +699,7 @@ body {
 }
 
 .load-more-btn:hover {
-  background: url("../assets/menu/button-icon-dark-hover.png") center/60px
+  background: url("/assets/menu/button-icon-dark-hover.png") center/60px
     no-repeat;
 }
 

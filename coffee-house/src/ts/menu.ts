@@ -172,7 +172,7 @@ function openMenu(): void {
   mobileMenu.classList.add("is-open");
   burger?.setAttribute("aria-expanded", "true");
   if (burgerIcon instanceof HTMLImageElement) {
-    burgerIcon.src = "./src/assets/header/State=active.png";
+    burgerIcon.src = "./assets/header/State=active.png";
   }
   document.body.classList.add("no-scroll");
 }
@@ -181,7 +181,7 @@ function closeMenu(): void {
   mobileMenu.classList.remove("is-open");
   burger?.setAttribute("aria-expanded", "false");
   if (burgerIcon instanceof HTMLImageElement) {
-    burgerIcon.src = "./src/assets/header/State=default.png";
+    burgerIcon.src = "./assets/header/State=default.png";
   }
   document.body.classList.remove("no-scroll");
 }
@@ -350,7 +350,7 @@ function openModalById(productId: number, imgSrc: string): void {
             <label class="seg-item" title="Not available">
               <input type="radio" name="size" value="${key.toUpperCase()}" disabled>
               <span class="seg-content">
-                <img src="./src/assets/menu/modal-icons/sizes/${key}.png" alt="${key}" width="30" height="30">
+                <img src="./assets/menu/modal-icons/sizes/${key}.png" alt="${key}" width="30" height="30">
                 <span>${key.toUpperCase()}</span>
               </span>
             </label>`;
@@ -367,7 +367,7 @@ function openModalById(productId: number, imgSrc: string): void {
             s.discountPrice ?? ""
           }" ${checked}>
             <span class="seg-content">
-              <img src="./src/assets/menu/modal-icons/sizes/${key}.png" alt="${key}" width="30" height="30">
+              <img src="./assets/menu/modal-icons/sizes/${key}.png" alt="${key}" width="30" height="30">
               <span>${s.size}</span>
             </span>
           </label>`;
@@ -384,7 +384,7 @@ function openModalById(productId: number, imgSrc: string): void {
             a.discountPrice ?? ""
           }" value="${a.name}">
             <span class="seg-content">
-              <img src="./src/assets/menu/modal-icons/sizes/${
+              <img src="./assets/menu/modal-icons/sizes/${
                 i + 1
               }.png" alt="${i + 1}" width="30" height="30">
               <span>${a.name}</span>

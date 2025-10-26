@@ -305,7 +305,7 @@ function openMenu() {
   mobileMenu.classList.add("is-open");
   burger?.setAttribute("aria-expanded", "true");
     if (burgerIcon instanceof HTMLImageElement) {
-      burgerIcon.src = "./src/assets/header/State=active.png";
+      burgerIcon.src = "./assets/header/State=active.png";
     }
   document.body.classList.add("no-scroll");
 }
@@ -316,7 +316,7 @@ function closeMenu() {
   mobileMenu.classList.remove("is-open");
   burger?.setAttribute("aria-expanded", "false");
   if (burgerIcon instanceof HTMLImageElement)
-    burgerIcon.src = "./src/assets/header/State=default.png";
+    burgerIcon.src = "./assets/header/State=default.png";
   document.body.classList.remove("no-scroll");
 }
   if (!mobileMenu) {

@@ -908,19 +908,19 @@ body {
 }
 
 .appstore {
-  background-image: url("../assets/app-section/app-strore-State=default.png");
+  background-image: url("/assets/app-section/app-strore-State=default.png");
 }
 
 .appstore:hover {
-  background-image: url("../assets/app-section/app-strore-State=hover.png");
+  background-image: url("/assets/app-section/app-strore-State=hover.png");
 }
 
 .googleplay {
-  background-image: url("../assets/app-section/Google-play-State=default.png");
+  background-image: url("/assets/app-section/Google-play-State=default.png");
 }
 
 .googleplay:hover {
-  background-image: url("../assets/app-section/Google-play-State=hover.png");
+  background-image: url("/assets/app-section/Google-play-State=hover.png");
 }
 
 .social-buttons {
@@ -944,24 +944,24 @@ body {
 }
 
 .twitter {
-  background-image: url("../assets/footer/X-State=default.png");
+  background-image: url("/assets/footer/X-State=default.png");
 }
 .twitter:hover {
-  background-image: url("../assets/footer/X-State=hover.png");
+  background-image: url("/assets/footer/X-State=hover.png");
 }
 
 .instagram {
-  background-image: url("../assets/footer/instagram-State=default.png");
+  background-image: url("/assets/footer/instagram-State=default.png");
 }
 .instagram:hover {
-  background-image: url("../assets/footer/instagram-State=hover.png");
+  background-image: url("/assets/footer/instagram-State=hover.png");
 }
 
 .facebook {
-  background-image: url("../assets/footer/Meta-State=default.png");
+  background-image: url("/assets/footer/Meta-State=default.png");
 }
 .facebook:hover {
-  background-image: url("../assets/footer/Meta-State=hover.png");
+  background-image: url("/assets/footer/Meta-State=hover.png");
 }
 
 .contact-box {
