@@ -10,14 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./assets/styles/main.css">
-    <link rel="icon" type="image/png" href="./assets/header/logo.svg">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="icon" type="image/png" href="./src/assets/header/logo.svg">
   </head>
   <body>
     <header class="header">
       <div class="topbar">
         <div class="brand">
-          <a href="./index.html"><img src="./assets/header/logo.png" alt="CoffeeLogo"></a>
+          <a href="./index.html"><img src="./src/assets/header/logo.png" alt="CoffeeLogo"></a>
           
         </div>
 
@@ -29,9 +29,26 @@
             <li><a href="#contacts">Contact us</a></li>
           </ul>
         </nav>
-        <a href="./menu.html" class="ghost-link" aria-label="Open menu">
-          Menu<img src="./assets/header/coffee-cup.svg" alt="cup">
+      
+
+         <div class="BuyCard cart-badge">
+          <a href="./card.html" id="cartBtn" class="cart-btn" aria-label="Cart">
+            <img
+              src="./src/assets/header/shopping-bag.svg"
+              alt="Cart"
+              width="20"
+              height="20"
+            />
+            <span id="cartCount" class="cart-badge" hidden>0</span>
+           
+          </a>
+        
+            <a href="./menu.html" class="ghost-link" aria-label="Open menu">
+          Menu<img src="./src/assets/header/coffee-cup.svg" alt="cup">
         </a>
+      </div>
+       
+      
 
         <button
           class="burger"
@@ -42,7 +59,7 @@
         >
           <img
             id="burger-icon"
-            src="./assets/header/State=default.png"
+            src="./src/assets/header/State=default.png"
             alt="burger-icon"
           >
         </button>
@@ -50,7 +67,7 @@
 
       <section class="hero" aria-label="Enjoy premium coffee">
         <video autoplay muted loop playsinline class="hero-img">
-          <source src="./assets/video/video.mp4" type="video/mp4" >
+          <source src="./src/assets/video/video.mp4" type="video/mp4" >
         </video>
         <div class="hero-content">
           <div class="hero-content-eyebrow">
@@ -74,7 +91,7 @@
                 <span class="btn-label">Menu</span>
                 <img
                   class="btn-icon"
-                  src="./assets/header/coffee-cup.svg"
+                  src="./src/assets/header/coffee-cup.svg"
                   alt="coffee-cup"
                   aria-hidden="true"
                 >
@@ -102,15 +119,26 @@
                 <li><a href="#contacts">Contact us</a></li>
               </ul>
             </nav>
+            <div style="display: flex; flex-direction: column; gap: 30px; align-items: center;">
             <a href="./menu.html" class="ghost-link-burger"
               >Menu
               <img
-                src="./assets/header/coffee-cup.svg"
+                src="./src/assets/header/coffee-cup.svg"
                 class="menu-icon"
                 alt="coffee-cup"
                 aria-hidden="true"
               >
             </a>
+             <a href="./card.html" class="ghost-link-burger"
+              >Cart
+              <img
+                src="./src/assets/header/shopping-bag.svg"
+                class="menu-icon"
+                alt="coffee-cup"
+                aria-hidden="true"
+              >
+            </a>
+            </div>
           </div>
         </div>
       </div>
@@ -125,10 +153,10 @@
         <div class="ch-container">
           <div class="ch-buttons">
             <button class="ch-arrow ch-next " aria-label="Previous">
-              <img src="./assets/buttons/arrow-right.svg" alt="Prev">
+              <img src="./src/assets/buttons/arrow-right.svg" alt="Prev">
             </button>
             <button class="ch-arrow ch-prev" aria-label="Next">
-              <img src="./assets/buttons/arrow-right.svg" alt="Next">
+              <img src="./src/assets/buttons/arrow-right.svg" alt="Next">
             </button>
           </div>
 
@@ -151,24 +179,24 @@
         <div class="right">
           <img
             class="mobile-here"
-            src="./assets/about-section/box.png"
+            src="./src/assets/about-section/box.png"
             alt="girl"
           >
           <img
             class="mobile-hide"
-            src="./assets/about-section/box1.png"
+            src="./src/assets/about-section/box1.png"
             alt="men"
           >
         </div>
         <div class="left">
           <img
             class="mobile-hide"
-            src="./assets/about-section/box2.png"
+            src="./src/assets/about-section/box2.png"
             alt="cup"
           >
           <img
             class="mobile-here"
-            src="./assets/about-section/box3.png"
+            src="./src/assets/about-section/box3.png"
             alt="friends"
           >
         </div>
@@ -197,7 +225,7 @@
       <div class="photo-conteiner">
         <img
           class="phones"
-          src="./assets/app-section/mobile-screens.png"
+          src="./src/assets/app-section/mobile-screens.png"
           alt="phones"
         >
       </div>
@@ -220,7 +248,7 @@
         <div class="info">
           <div>
             <span class="icon"
-              ><img src="./assets/footer/pin-alt.svg" alt="pin"
+              ><img src="./src/assets/footer/pin-alt.svg" alt="pin"
             ></span>
             <a
               href="https://www.google.com/maps?q=8558+Green+Rd,+LA"
@@ -232,7 +260,7 @@
           </div>
           <div>
             <span class="icon"
-              ><img src="./assets/footer/Path.svg" alt="Path"
+              ><img src="./src/assets/footer/Path.svg" alt="Path"
             ></span>
             
               <a
@@ -246,7 +274,7 @@
 
           <div>
             <span class="icon"
-              ><img src="./assets/footer/clock.svg" alt="clock"
+              ><img src="./src/assets/footer/clock.svg" alt="clock"
             ></span>
             Mon-Sat: 9:00 AM – 23:00 PM
           </div>
@@ -254,6 +282,6 @@
       </div>
     </footer>
 
-    <script src="./assets/js/script.js"></script>
+    <script type="module"  src="./src/ts/script.ts"></script>
   </body>
 </html>

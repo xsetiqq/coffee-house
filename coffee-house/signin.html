@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,20 +32,21 @@
           </ul>
         </nav>
         <div class="BuyCard cart-badge">
-          <a href="./card.html" id="cartBtn" class="cart-btn" aria-label="Cart">
+          <a href="./card.html" id="cartBtn" class="cart-btn" aria-label="Cart" >
             <img
               src="./src/assets/header/shopping-bag.svg"
               alt="Cart"
               width="20"
               height="20"
+              style="display: block;"
             />
             <span id="cartCount" class="cart-badge" hidden>0</span>
            
           </a>
-          <div class="text-decoration">
+          <div class="">
             <a
               href="./menu.html"
-              class="ghost-link inactive"
+              class="ghost-link"
               aria-label="Open menu"
             >
               Menu
@@ -87,7 +89,6 @@
                 <li><a href="./index.html#contacts">Contact us</a></li>
               </ul>
             </nav>
-            <div style="display: flex; flex-direction: column; gap: 30px; align-items: center;">
             <a href="./menu.html" class="ghost-link-burger"
               >Menu
               <img
@@ -95,49 +96,36 @@
                 class="menu-icon"
                 alt="coffee-cup"
                 aria-hidden="true"
-              >
+              />
             </a>
-             <a href="./card.html" class="ghost-link-burger"
-              >Cart
-              <img
-                src="./src/assets/header/shopping-bag.svg"
-                class="menu-icon"
-                alt="coffee-cup"
-                aria-hidden="true"
-              >
-            </a>
-            </div>
           </div>
         </div>
       </div>
     </header>
     <main>
-      <section class="cups-section">
-        <div class="offer">
-          <h2 class="cups-heading">
-            Behind each of our cups hides an
-            <span class="highlight">amazing surprise</span>
-          </h2>
+     <section class="signIn-section">
+  <div class="auth-section">
+    <h2 class="cups-heading">Sign In</h2>
 
-          <div class="menu-tabs">
-            <button class="tab coffee active"></button>
-            <button class="tab tea"></button>
-            <button class="tab dessert"></button>
-          </div>
-        </div>
+    <form id="loginForm" class="auth-form" novalidate>
+      <label class="auth-label">
+        Login
+        <input id="loginInput" type="text" name="login" placeholder="Placeholder" class="auth-input" />
+        <small class="field-error" id="loginErr"></small>
+      </label>
 
-        <div id="product-list" class="product-list"></div>
-        <div
-          id="ifLoadError"
-          style="
-            width: 100%;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-          "
-        ></div>
-        <button id="load-more" class="load-more-btn"></button>
-      </section>
+      <label class="auth-label">
+        Password
+        <input id="passwordInput" type="password" name="password" placeholder="Placeholder" class="auth-input" />
+        <small class="field-error" id="passwordErr"></small>
+      </label>
+
+      <button id="loginBtn" type="submit" class="btn auth-btn" disabled>Sign In</button>
+      <div id="formErr" class="form-error" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
     </main>
     <footer id="contacts" class="contacts-section">
       <div class="ofer">
@@ -183,56 +171,7 @@
       </div>
     </footer>
 
-    <div id="product-modal" class="modal" aria-hidden="true">
-      <div class="modal-backdrop" data-close></div>
-
-      <div
-        class="modal-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modal-title"
-      >
-        <div class="modal-body">
-          <img
-            id="modal-img"
-            class="modal-img"
-            alt="modal-img"
-            src="./src/assets/menu/coffee/coffee-1.jpg"
-          />
-
-          <div class="modal-info">
-            <h3 id="modal-title" class="modal-title">&nbsp;</h3>
-            <p id="modal-desc" class="modal-desc"></p>
-
-            <div class="group">
-              <div class="group-title">Size</div>
-              <div id="sizesGroup" class="seg"></div>
-            </div>
-
-            <div class="group">
-              <div class="group-title">Additives</div>
-              <div id="addsGroup" class="seg seg--chips"></div>
-            </div>
-
-            <div class="total-row">
-              <strong>Total:</strong>
-              <strong id="modal-price">$0.00</strong>
-            </div>
-
-            <div class="modal-footer">
-              <button
-                id="addToCart"
-                class="pm-add close-btn"
-                type="button"
-                data-close
-              >
-                Add to cart
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script type="module" src="./src/ts/menu.ts"></script>
+    <script type="module" src="./src/ts/card.ts"></script>
+     <script type="module" src="./src/ts/login.ts"></script>
   </body>
 </html>

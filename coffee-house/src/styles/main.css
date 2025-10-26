@@ -378,6 +378,7 @@ body {
   display: grid;
   gap: 20px;
   place-items: center;
+  
 }
 .ch-inner-text {
   display: flex;
@@ -391,6 +392,7 @@ body {
   display: block;
   user-select: none;
   pointer-events: none;
+  border-radius: 40px;
 }
 .ch-title {
   margin: 0;
@@ -906,19 +908,19 @@ body {
 }
 
 .appstore {
-  background-image: url("../app-section/app-strore-State=default.png");
+  background-image: url("../assets/app-section/app-strore-State=default.png");
 }
 
 .appstore:hover {
-  background-image: url("../app-section/app-strore-State=hover.png");
+  background-image: url("../assets/app-section/app-strore-State=hover.png");
 }
 
 .googleplay {
-  background-image: url("../app-section/Google-play-State=default.png");
+  background-image: url("../assets/app-section/Google-play-State=default.png");
 }
 
 .googleplay:hover {
-  background-image: url("../app-section/Google-play-State=hover.png");
+  background-image: url("../assets/app-section/Google-play-State=hover.png");
 }
 
 .social-buttons {
@@ -942,24 +944,24 @@ body {
 }
 
 .twitter {
-  background-image: url("../footer/X-State=default.png");
+  background-image: url("../assets/footer/X-State=default.png");
 }
 .twitter:hover {
-  background-image: url("../footer/X-State=hover.png");
+  background-image: url("../assets/footer/X-State=hover.png");
 }
 
 .instagram {
-  background-image: url("../footer/instagram-State=default.png");
+  background-image: url("../assets/footer/instagram-State=default.png");
 }
 .instagram:hover {
-  background-image: url("../footer/instagram-State=hover.png");
+  background-image: url("../assets/footer/instagram-State=hover.png");
 }
 
 .facebook {
-  background-image: url("../footer/Meta-State=default.png");
+  background-image: url("../assets/footer/Meta-State=default.png");
 }
 .facebook:hover {
-  background-image: url("../footer/Meta-State=hover.png");
+  background-image: url("../assets/footer/Meta-State=hover.png");
 }
 
 .contact-box {
@@ -1048,4 +1050,48 @@ body {
   -moz-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
+}
+.loader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.loader-icon {
+  animation: spin 1s linear infinite;
+  color: var(--text-dark); 
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.BuyCard{
+  display: flex;
+  gap: 32px;
+}
+.cart-btn{
+  display: flex;
+ align-items: center;
+ justify-content: center;
+ text-decoration: none !important;
+ gap: 8px;
+
+}
+@media (max-width: 768px) {
+  .cart-btn{
+  display: none !important;
+ align-items: center;
+ justify-content: center;
+ text-decoration: none !important;
+ gap: 8px;
+
+}
+}
+.cart-badge{
+  
+  color: var(--text-dark);
+  font-weight: 600;
 }
